@@ -6,7 +6,7 @@ clear ; close all; clc
 % Load Training Data
 fprintf('Loading Training Data ...\n');
 fflush(stdout);
-data = csvread('./train.csv');
+data = csvread('./train.csv'); % https://www.kaggle.com/c/digit-recognizer/download/train.csv
 
 % Clean & Organize Training Data
 data = reshape(data(2:end,:),size(data,1)-1, size(data,2)); % remove headers
