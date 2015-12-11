@@ -7,7 +7,7 @@ function all_theta = oneVsAll(X, y, num_labels, lambda)
 	all_theta = zeros(num_labels,n+1);
 	X = [ones(m,1) X];
 
-	options = optimset('GradObj', 'on', 'MaxIter', 5);
+	options = optimset('GradObj', 'on', 'MaxIter', 100);
 	init_theta = zeros(n+1, 1);
 
 	for k=0:(num_labels-1),
